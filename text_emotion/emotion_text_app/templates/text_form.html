@@ -1,0 +1,7 @@
+<h1>To check the entered text emotion</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="text">Enter some text:</label>
+    <textarea name="text" id="text"></textarea>
+    <input type="submit" value="Predict Emotion">
+</form>

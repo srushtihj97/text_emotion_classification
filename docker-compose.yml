@@ -1,0 +1,14 @@
+version: '3.1'
+services:
+  emotion_app:
+    image: emotion_app:latest
+    container_name: emotion_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    env_file: .env
+    ports:
+      - 8000:8000
+    command: /bin/sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    privileged: true
