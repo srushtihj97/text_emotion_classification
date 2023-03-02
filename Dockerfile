@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.10-slim
 
 RUN apt-get update --fix-missing && \
     apt-get install -y build-essential gnupg gcc g++ pandoc ca-certificates python3 python3-dev python git && \

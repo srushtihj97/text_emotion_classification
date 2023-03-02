@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: emotion_postgres
+    restart: always
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_PASSWORD=12345
+      - POSTGRES_DB=emotion
+      - POSTGRES_USER=postgres
+    privileged: true
