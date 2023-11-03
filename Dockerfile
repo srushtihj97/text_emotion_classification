@@ -10,7 +10,6 @@ RUN apt-get update --fix-missing && \
 # Install pip dependencies
 COPY requirements.txt /app/
 
-
 #RUN pip install \
 RUN pip install --upgrade pip
 RUN pip install --upgrade pip setuptools
